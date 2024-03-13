@@ -1,11 +1,35 @@
 .hero-section {
+    position: relative;
     text-align: center;
     padding: 40px 20px;
     padding-left: 40%;
+    padding-top: 10%;
+    background-image: url('images/about-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 350px;
+}
+  
+.tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
+#about-content {
+    position: relative;
+    z-index: 2;
+}
+  
 h1 {
     font-size: 60px;
+    
 }
 
 /*
