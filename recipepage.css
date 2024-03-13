@@ -25,9 +25,13 @@ img {
   flex-direction: column;
   width: 100%;
   background-image: url("images/spaghetti.png");
-  background-size: cover;
-  background-position: center;
   height: 300px;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
 }
 
 h1,
@@ -36,6 +40,12 @@ h3 {
   text-align: center;
   color: white;
   margin: 0;
+}
+
+header,
+nav {
+  position: relative;
+  z-index: 2;
 }
 
 .title {
