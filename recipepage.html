@@ -9,50 +9,45 @@
     <title>Recipe</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li id="logo">
-          <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
-        </li>
-        <div id="middle-nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="discover.html">Discover Recipes</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </div>
-        <li><a href="account.html">My Account</a></li>
-      </ul>
-    </nav>
+    <div class="recipe-header">
+      <nav>
+        <ul>
+          <li id="logo">
+            <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
+          </li>
+          <div id="middle-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="discover.html">Discover Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </div>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </nav>
+      <h1 class="rufina-bold">Classic Spaghetti Carbonara</h1>
+      <h3 class="rufina-bold">By Jeromy Chang</h3>
+    </div>
     <main>
       <div class="container">
-        <div class="recipe-header">
-          <h1>Classic Spaghetti Carbonara</h1>
-          <h2>By Jeromy Chang</h2>
-        </div>
         <p>
           A traditional Italian pasta dish with eggs, cheese, pancetta, and
           black pepper.
         </p>
-        <div class="ingredients-container">
-          <div class="ingredients">
-            <h2>Ingredients</h2>
-            <ul>
-              <li>8 ounces spaghetti</li>
-              <li>2 large eggs</li>
-              <li>1 cup grated Pecorino Romano cheese</li>
-              <li>4 ounces pancetta or bacon, diced</li>
-              <li>2 cloves garlic, minced</li>
-              <li>Salt and black pepper to taste</li>
-              <li>Chopped fresh parsley for garnish</li>
-            </ul>
-          </div>
-          <img
-            src="images/spaghetti.png"
-            width="300px"
-            alt="Classic Spaghetti Carbonara"
-          />
+
+        <div class="ingredients">
+          <h2 class="title">Ingredients</h2>
+          <ul>
+            <li>8 ounces spaghetti</li>
+            <li>2 large eggs</li>
+            <li>1 cup grated Pecorino Romano cheese</li>
+            <li>4 ounces pancetta or bacon, diced</li>
+            <li>2 cloves garlic, minced</li>
+            <li>Salt and black pepper to taste</li>
+            <li>Chopped fresh parsley for garnish</li>
+          </ul>
         </div>
+
         <div class="instructions">
-          <h2>Instructions</h2>
+          <h2 class="title">Instructions</h2>
           <ol>
             <li>
               Cook spaghetti according to package instructions until al dente.
@@ -83,18 +78,18 @@
           </ol>
         </div>
         <div class="comments">
-          <h2>Comments</h2>
+          <h2 class="title">Comments</h2>
           <div>
-            <strong>User123:</strong> This was absolutely delicious! My family
-            loved it.
+            <strong>User123</strong>
+            <p>This was absolutely delicious! My family loved it.</p>
           </div>
           <div>
-            <strong>CookingFanatic:</strong> Great recipe! I added some extra
-            garlic for more flavor.
+            <strong>CookingFanatic</strong>
+            <p>Great recipe! I added some extra garlic for more flavor.</p>
           </div>
         </div>
         <div class="comment-form">
-          <h2>Leave a Comment</h2>
+          <h2 class="title">Leave a Comment</h2>
           <form>
             <input
               placeholder="Name"
