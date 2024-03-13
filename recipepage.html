@@ -1,9 +1,121 @@
 <!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="recipepage.css" />
+    <script src="script.js"></script>
+    <title>Recipe</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li id="logo">
+          <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
+        </li>
+        <div id="middle-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="discover.html">Discover Recipes</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </div>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="recipe-header">
+          <h1>Classic Spaghetti Carbonara</h1>
+          <h2>By Jeromy Chang</h2>
+        </div>
+        <p>
+          A traditional Italian pasta dish with eggs, cheese, pancetta, and
+          black pepper.
+        </p>
+        <div class="ingredients-container">
+          <div class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+              <li>8 ounces spaghetti</li>
+              <li>2 large eggs</li>
+              <li>1 cup grated Pecorino Romano cheese</li>
+              <li>4 ounces pancetta or bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Chopped fresh parsley for garnish</li>
+            </ul>
+          </div>
+          <img
+            src="images/spaghetti.png"
+            width="300px"
+            alt="Classic Spaghetti Carbonara"
+          />
+        </div>
+        <div class="instructions">
+          <h2>Instructions</h2>
+          <ol>
+            <li>
+              Cook spaghetti according to package instructions until al dente.
+              Reserve 1/2 cup of pasta water, then drain the spaghetti.
+            </li>
+            <li>
+              In a bowl, whisk together eggs, grated cheese, salt, and black
+              pepper. Set aside.
+            </li>
+            <li>
+              In a large skillet, cook diced pancetta over medium heat until
+              crispy. Add minced garlic and cook until fragrant.
+            </li>
+            <li>
+              Reduce heat to low. Add cooked spaghetti to the skillet with
+              pancetta and garlic. Toss to combine.
+            </li>
+            <li>
+              Remove skillet from heat. Quickly pour the egg and cheese mixture
+              over the hot spaghetti, tossing continuously to coat the pasta. If
+              the sauce is too thick, add reserved pasta water gradually until
+              desired consistency is reached.
+            </li>
+            <li>
+              Serve immediately, garnished with chopped parsley and additional
+              grated cheese if desired.
+            </li>
+          </ol>
+        </div>
+        <div class="comments">
+          <h2>Comments</h2>
+          <div>
+            <strong>User123:</strong> This was absolutely delicious! My family
+            loved it.
+          </div>
+          <div>
+            <strong>CookingFanatic:</strong> Great recipe! I added some extra
+            garlic for more flavor.
+          </div>
+        </div>
+        <div class="comment-form">
+          <h2>Leave a Comment</h2>
+          <form>
+            <input
+              placeholder="Name"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+            <textarea
+              placeholder="Comment"
+              id="comment"
+              name="comment"
+              required
+            ></textarea>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
+    </footer>
+  </body>
 </html>

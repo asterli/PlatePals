@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="base.css" />
-        <link rel="stylesheet" type="text/css" href="discover.css" />
-        <title>PlatePals - Discover Recipes</title>
-    </head>
-    <body>
-        <div class="header">
-            <h1>PlatePals</h1>
-            <div class="navbar">
-                <div>
-                    <a href="about.html">About</a>
-                    <a href="discover.html">Discover Recipes</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
-                <div>
-                    <a href="account.html">My Account</a>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="base.css" />
+    <link rel="stylesheet" type="text/css" href="discover.css" />
+    <title>PlatePals - Discover Recipes</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li id="logo">
+          <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
+        </li>
+        <div id="middle-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="discover.html">Discover Recipes</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </div>
-        <div class="categories">
-            <a href="#">All</a>
-            <a href="#">Starter</a>
-            <a href="#">Lunch</a>
-            <a href="#">Dinner</a>
-            <a href="#">Drinks</a>
-            <a href="#">Sweets</a>
-            <a href="#">Fruits</a>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="categories">
+        <a href="#">All</a>
+        <a href="#">Starter</a>
+        <a href="#">Lunch</a>
+        <a href="#">Dinner</a>
+        <a href="#">Drinks</a>
+        <a href="#">Sweets</a>
+        <a href="#">Fruits</a>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <input type="submit" value="Search" />
+      </div>
+      <div class="recipe-grid">
+        <!-- Repeat this block for each recipe -->
+        <div class="recipe-card">
+          <img src="path_to_recipe_image.jpg" alt="Recipe Name" />
+          <h3>Braised Sliced Abalone, Fish Maw with Premium Seafood</h3>
+          <p>Cold Dishes - Starters</p>
         </div>
-        <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <input type="submit" value="Search">
-        </div>
-        <div class="recipe-grid">
-            <!-- Repeat this block for each recipe -->
-            <div class="recipe-card">
-                <img src="path_to_recipe_image.jpg" alt="Recipe Name">
-                <h3>Braised Sliced Abalone, Fish Maw with Premium Seafood</h3>
-                <p>Cold Dishes - Starters</p>
-            </div>
-            <!-- ... other recipes ... -->
-        </div>
-        <div class="footer">
-            <p>View More</p>
-        </div>
-        <div class="footer">
-            <p>© 2024 PlatePals Inc. All rights reserved</p>
-        </div>
-    </body>
+        <!-- ... other recipes ... -->
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
+    </footer>
+  </body>
 </html>

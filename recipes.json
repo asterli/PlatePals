@@ -1,0 +1,120 @@
+{
+  "recipes": [
+    {
+      "title": "Classic Spaghetti Carbonara",
+      "author": "Jeromy Chang",
+      "description": "A traditional Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
+      "ingredients": [
+        "8 ounces spaghetti",
+        "2 large eggs",
+        "1 cup grated Pecorino Romano cheese",
+        "4 ounces pancetta or bacon, diced",
+        "2 cloves garlic, minced",
+        "Salt and black pepper to taste",
+        "Chopped fresh parsley for garnish"
+      ],
+      "instructions": [
+        "Cook spaghetti according to package instructions until al dente. Reserve 1/2 cup of pasta water, then drain the spaghetti.",
+        "In a bowl, whisk together eggs, grated cheese, salt, and black pepper. Set aside.",
+        "In a large skillet, cook diced pancetta over medium heat until crispy. Add minced garlic and cook until fragrant.",
+        "Reduce heat to low. Add cooked spaghetti to the skillet with pancetta and garlic. Toss to combine.",
+        "Remove skillet from heat. Quickly pour the egg and cheese mixture over the hot spaghetti, tossing continuously to coat the pasta. If the sauce is too thick, add reserved pasta water gradually until desired consistency is reached.",
+        "Serve immediately, garnished with chopped parsley and additional grated cheese if desired."
+      ],
+      "image": "spaghetti_carbonara.jpg",
+      "category": "Pasta",
+      "rating": 4.8,
+      "comments": [
+        {
+          "user": "User123",
+          "comment": "This was absolutely delicious! My family loved it."
+        },
+        {
+          "user": "CookingFanatic",
+          "comment": "Great recipe! I added some extra garlic for more flavor."
+        }
+      ]
+    },
+    {
+      "title": "Classic Chocolate Chip Cookies",
+      "author": "Justin Chung",
+      "description": "Soft and chewy chocolate chip cookies with a perfect balance of sweetness and richness.",
+      "ingredients": [
+        "2 1/4 cups all-purpose flour",
+        "1 teaspoon baking soda",
+        "1/2 teaspoon salt",
+        "1 cup unsalted butter, softened",
+        "3/4 cup granulated sugar",
+        "3/4 cup packed brown sugar",
+        "1 teaspoon vanilla extract",
+        "2 large eggs",
+        "2 cups semisweet chocolate chips"
+      ],
+      "instructions": [
+        "Preheat oven to 375°F (190°C). Line baking sheets with parchment paper.",
+        "In a medium bowl, whisk together flour, baking soda, and salt. Set aside.",
+        "In a large bowl, cream together softened butter, granulated sugar, brown sugar, and vanilla extract until light and fluffy.",
+        "Beat in eggs, one at a time, until well combined.",
+        "Gradually add the flour mixture to the wet ingredients, mixing until just combined.",
+        "Stir in chocolate chips until evenly distributed throughout the cookie dough.",
+        "Drop tablespoon-sized balls of dough onto the prepared baking sheets, spacing them about 2 inches apart.",
+        "Bake in preheated oven for 9 to 11 minutes, or until the edges are golden brown.",
+        "Allow cookies to cool on baking sheets for 5 minutes before transferring to wire racks to cool completely."
+      ],
+      "image": "chocolate_chip_cookies.jpg",
+      "category": "Dessert",
+      "rating": 4.9,
+      "comments": [
+        {
+          "user": "BakingQueen",
+          "comment": "These cookies turned out perfectly! Just the right amount of chewiness."
+        },
+        {
+          "user": "SweetTooth",
+          "comment": "My favorite chocolate chip cookie recipe! They disappear quickly every time I make them."
+        }
+      ]
+    },
+    {
+      "title": "Chicken Parmesan",
+      "author": "Aster Li",
+      "description": "Tender chicken breasts coated in breadcrumbs, topped with marinara sauce and melted cheese.",
+      "ingredients": [
+        "4 boneless, skinless chicken breasts",
+        "1 cup all-purpose flour",
+        "2 large eggs, beaten",
+        "1 cup Italian breadcrumbs",
+        "1/2 cup grated Parmesan cheese",
+        "1 cup marinara sauce",
+        "1 cup shredded mozzarella cheese",
+        "2 tablespoons olive oil",
+        "Salt and black pepper to taste",
+        "Chopped fresh basil for garnish"
+      ],
+      "instructions": [
+        "Preheat oven to 375°F (190°C).",
+        "Place each chicken breast between two sheets of plastic wrap. Pound with a meat mallet or rolling pin until about 1/2 inch thick.",
+        "Season both sides of chicken breasts with salt and black pepper.",
+        "Set up three shallow bowls: one with flour, one with beaten eggs, and one with a mixture of breadcrumbs and grated Parmesan cheese.",
+        "Dredge each chicken breast in flour, then dip into beaten eggs, and coat with breadcrumb mixture, pressing gently to adhere.",
+        "In a large skillet, heat olive oil over medium-high heat. Cook breaded chicken breasts for 3-4 minutes per side, or until golden brown and cooked through.",
+        "Transfer cooked chicken breasts to a baking dish. Top each breast with marinara sauce and shredded mozzarella cheese.",
+        "Bake in preheated oven for 15-20 minutes, or until the cheese is melted and bubbly.",
+        "Garnish with chopped fresh basil before serving."
+      ],
+      "image": "chicken_parmesan.jpg",
+      "category": "Main Dish",
+      "rating": 4.7,
+      "comments": [
+        {
+          "user": "Foodie123",
+          "comment": "One of my go-to recipes for dinner parties! Always a crowd-pleaser."
+        },
+        {
+          "user": "CookingNovice",
+          "comment": "I was nervous to try making chicken parmesan, but this recipe was easy to follow and turned out delicious!"
+        }
+      ]
+    }
+  ]
+}

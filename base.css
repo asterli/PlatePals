@@ -1,7 +1,72 @@
 :root {
-    --accent-color: #0C869C;
-    --gray: #D3D3D3;
-    --dark-gray: #A9A9A9;
-    --darkest-gray: #808080;
-    --black: #36454F;
+  --accent-color: #0c869c;
+  --gray: #d3d3d3;
+  --dark-gray: #a9a9a9;
+  --darkest-gray: #808080;
+  --black: #36454f;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
+  margin-bottom: -60px;
+}
+main:after {
+  content: "";
+  display: block;
+  height: 60px;
+}
+
+nav {
+  background-color: var(--accent-color);
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#middle-nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+footer {
+  background: #0c869c;
+  color: #fff;
+  width: 100%;
+  margin-top: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
