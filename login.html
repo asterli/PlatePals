@@ -8,7 +8,7 @@
     <title>PlatePals - Contact Us</title>
   </head>
   <body>
-    <nav class="rufina">
+    <nav>
       <ul>
         <li id="logo">
           <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
@@ -17,6 +17,7 @@
           <li><a href="login.html">Login</a></li>
           <li><a href="signup.html">Sign Up</a></li>
         </div>
+        <li><a href="account.html">My Account</a></li>
       </ul>
     </nav>
     <main>
@@ -26,7 +27,7 @@
       </div>
       
       <!-- Add the login form here -->
-      <form id="login-form" action="login_process.php" method="post">
+      <form id="login-form" action="login.php" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" placeholder="Email/Username" name="username" required>
 
@@ -44,7 +45,7 @@
         <input id ="create" type="submit" value="Create an account!" onclick="location.href='signup.html';">
       
     </main>
-    <footer class="lato">
+    <footer>
       <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
     </footer>
   </body>
