@@ -21,28 +21,42 @@
     </nav>
     <main>
       <div id="sign-in-text">
-        <h1> Sign in here:</h1>
-        <h3> Have all your favorite recipes in one place!</h3>
+        <h1>Sign in here:</h1>
+        <h3>Have all your favorite recipes in one place!</h3>
       </div>
-      
+
       <!-- Add the login form here -->
       <form id="login-form" action="login.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Email/Username" name="username" required>
+        <input
+          type="text"
+          id="username"
+          placeholder="Email/Username"
+          name="username"
+          required
+        />
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Password" name="password" required>
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          name="password"
+          required
+        />
 
-        <input id ="submit" type="submit" value="Login">
-      
+        <input id="submit" type="submit" value="Login" />
+
         <div class="centered-line"></div>
       </form>
-        <div id="sign-in-text">
-          <h3>New Here?</h3>
-          <h4>Create an account! It's quick and easy!</h4>
-        </div>
-        <input id ="create" type="submit" value="Create an account!" onclick="location.href='signup.html';">
-      
+      <div id="create-account-text">
+        <h3>New Here?</h3>
+        <h4>Create an account! It's quick and easy!</h4>
+      </div>
+      <input
+        id="create"
+        type="submit"
+        value="Create an account!"
+        onclick="location.href='signup.html';"
+      />
     </main>
     <footer class="lato">
       <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>

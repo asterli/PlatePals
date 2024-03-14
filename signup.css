@@ -19,7 +19,7 @@ h1 {
   margin-bottom: 2.5%;
 }
 h3 {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 #create-text {
   text-align: center;
@@ -33,7 +33,7 @@ form {
 }
 input {
   display: flex;
-  width: 80%;
+  width: 60%;
   margin-bottom: 10px;
   color: black;
   background-color: #ebf0e4;
@@ -46,16 +46,15 @@ input#submit {
   background-color: #004c77;
   padding-left: 0%;
   padding-right: 0;
-  width: 80%;
+  width: 60%;
 }
 
 #password {
-  margin-bottom: 7.5%;
+  margin-bottom: 5%;
 }
 
 input::placeholder {
   font-family: "Lato", sans-serif;
-  padding-left: 5px;
 }
 
 input[type="submit"] {
