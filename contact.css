@@ -22,7 +22,7 @@ h5{
     background-repeat: no-repeat;
     background-position: center;
     color: white;
-    height: 200px;
+    height: 325px;
 }
 
 #form h1{
@@ -66,3 +66,7 @@ input{
 textarea{
     width: 45%;
 }
+
+/* nav{
+    background-color: transparent;
+} */
