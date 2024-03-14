@@ -19,6 +19,16 @@
   font-style: normal;
 }
 
+.tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
 .lato {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -47,7 +57,7 @@ main:after {
 nav {
   font-size: 20px;
   background-color: var(--accent-color);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 }
 
 nav ul {
@@ -61,6 +71,12 @@ nav ul {
   overflow: hidden;
   width: 90%;
   margin: auto;
+}
+
+#end-nav {
+  display: flex;
+  gap: 5rem;
+  justify-content: flex-end;
 }
 
 a {
