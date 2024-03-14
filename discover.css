@@ -85,7 +85,8 @@ main {
   border: 1px solid #ddd;
 }
 
-h3, p {
+h3,
+p {
   z-index: 2;
 }
 
@@ -123,4 +124,14 @@ button {
   background: #ffffff;
   color: #000000;
   border: 1px solid #000000;
+}
+
+p {
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  p {
+    font-size: 16px;
+  }
 }

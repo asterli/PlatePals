@@ -39,7 +39,6 @@
   z-index: 1;
 }
 
-
 .lato {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -112,4 +111,14 @@ footer {
   align-items: center;
   justify-content: center;
   font-size: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    font-size: 13px;
+  }
+
+  #middle-nav {
+    gap: 3rem;
+  }
 }
