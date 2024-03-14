@@ -21,7 +21,27 @@
         <li><a href="account.html">My Account</a></li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      <div class="hero-section">
+          <h1>Get in Touch</h1>
+          <h5>Let us know any questions, comments, or concerns you may have!</h5> 
+      </div>
+      
+      <div id="form">
+          <h1>Contact us by sending an email here!</h1>
+          <form method="POST" action="mailto:jchang5@scu.edu?subject=Contact+Jeromy+Chang+Request" enctype="text/plain">
+            <!-- <div class="input-container">
+              <input type="text" id="username" placeholder="First Name" name="username" required>
+              <input type="text" id="password" placeholder="Last Name" name="password" required>
+            </div> -->
+            <div class="input-container">
+              <textarea type="text" id="questions-comments" placeholder="Questions/Comments" name="questions-comments" required></textarea>
+            </div>
+            <input id="submit" type="submit" value="Send">
+            <div class="centered-line"></div>
+          </form>
+      </div>
+    </main>
     <footer>
       <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
     </footer>

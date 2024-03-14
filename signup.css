@@ -1,0 +1,28 @@
+main{
+    background-color: #EBF0E4;
+}
+h1{
+    margin-top: 0;
+}
+#create-text{
+    text-align: center;
+    padding-top: 10%;
+}
+form{
+    margin-left: 34%;
+}
+input{
+    display: flex;
+    width: 50%;
+    margin-bottom: 10px;
+    background-color: none;
+    color: black;
+}
+input#submit{
+    display: block;
+    color: white;
+    background-color: #004C77;
+    padding-left: 0%;
+    padding-right: 0;
+    width:50.5%
+}

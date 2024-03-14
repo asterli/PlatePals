@@ -1,0 +1,14 @@
+{
+    "accounts": [
+        {
+            "email": "jchang5@scu.edu",
+            "username": "asdf",
+            "password": "1234"
+        },
+        {
+            "email": "jchang5@scu.edu",
+            "username": "qwer",
+            "password": "1234"
+        }
+    ]
+}

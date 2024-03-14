@@ -1,0 +1,68 @@
+main{
+    background-color: #EBF0E4;
+}
+
+h1{
+    color: white;
+    padding-left: 15%;
+    margin-top: 0px;
+}
+h5{
+    color: white;
+    padding-left: 15%;
+}
+.hero-section {
+    position: relative;
+    text-align: left;
+    padding: 40px 20px;
+    padding-left: 0%;
+    padding-top: 10%;
+    background-image: url(images/contact.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 200px;
+}
+
+#form h1{
+    color: black;
+    padding-left: 0;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.user-info{
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+}
+.email{
+    display: block;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+}
+input#submit{
+    display: block;
+    color: white;
+    background-color: #004C77;
+    padding-left: 0%;
+    padding-right: 0;
+    width:46%;
+    margin-left: 27%;
+}
+input{
+    background-color: transparent;
+    margin: 1%;
+}
+.input-container {
+    text-align: center;
+  }
+  
+.input-container input {
+    display: inline-block;
+}
+textarea{
+    width: 45%;
+}

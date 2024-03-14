@@ -21,7 +21,24 @@
         <li><a href="account.html">My Account</a></li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      <div id="create-text">
+        <h1>Create an account!</h1>
+        <h3>Stay up to date with the latest recipes!</h3>
+        <h4>Don’t miss out! Sign up now and get all the new recipes first.</h4>
+      </div>
+      <form id="login-form" action="signup.php" method="post">
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Email" name="email" required>
+
+        <label for="username">Username:</label>
+        <input type="username" id="username" placeholder="Create Username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder=" Create Password" name="password" required>
+
+        <input id ="submit" type="submit" value="Create an Account" >
+      
+    </main>
     <footer>
       <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
     </footer>
