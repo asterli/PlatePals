@@ -6,19 +6,22 @@ function generateRecipeCards(recipes) {
     const card = document.createElement("div");
     card.classList.add("recipe-card");
 
-    card.innerHTML = `
-        <div class="recipe-image">
-          <img src="${recipe.image}" alt="${recipe.title}" />
-        </div>
-        <div class="recipe-info">
-          <h2>${recipe.title}</h2>
-          <p><strong>Author:</strong> ${recipe.author}</p>
-          <p><strong>Description:</strong> ${recipe.description}</p>
-          <p><strong>Category:</strong> ${recipe.category}</p>
-          <p><strong>Rating:</strong> ${recipe.rating}</p>
-        </div>
-      `;
+    // Create an anchor tag with href pointing to the recipe page
+    const recipeLink = document.createElement("a");
+    recipeLink.href = `recipepage.html?id=${recipe.id}`; // Assuming you have a recipe page named recipe.html with a query parameter id
 
+    recipeLink.innerHTML = `
+      <div class="recipe-image">
+        <img src="${recipe.image}" alt="${recipe.title}" />
+      </div>
+      <div class="recipe-info">
+        <h2>${recipe.title}</h2>
+        <p><strong></strong> ${recipe.description}</p>
+        <p id="category"><strong></strong> ${recipe.category}</p>
+      </div>
+    `;
+
+    card.appendChild(recipeLink);
     recipeContainer.appendChild(card);
   });
 }
