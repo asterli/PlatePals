@@ -23,7 +23,7 @@ img {
   height: auto;
   border-radius: 8px;
 }
-.recipe-header {
+.recipe-nav {
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -8,38 +8,65 @@
     <title>PlatePals - Contact Us</title>
   </head>
   <body>
-    <nav class="rufina">
-      <ul>
-        <li id="logo">
-          <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
-        </li>
-        <div id="middle-nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="discover.html">Discover Recipes</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </div>
-        <li><a href="account.html">My Account</a></li>
-      </ul>
-    </nav>
-    <main>
+    <div class="contact-nav">
+      <nav class="rufina">
+        <ul>
+          <li id="logo">
+            <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
+          </li>
+          <div id="middle-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="discover.html">Discover Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </div>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </nav>
       <div class="hero-section">
-          <h1>Get in Touch</h1>
-          <h5>Let us know any questions, comments, or concerns you may have!</h5> 
+        <h1 id="first-text">Get in Touch</h1>
+        <h4>Let us know any questions, comments, or concerns you may have!</h4>
       </div>
-      
+    </div>
+    <main>
       <div id="form">
-          <h1>Contact us by sending an email here!</h1>
-          <form method="POST" action="mailto:jchang5@scu.edu?subject=Contact+Jeromy+Chang+Request" enctype="text/plain">
-            <!-- <div class="input-container">
+        <h1>Contact us by sending an email here!</h1>
+        <form
+          method="POST"
+          action="mailto:jchang5@scu.edu?subject=Contact+Jeromy+Chang+Request"
+          enctype="text/plain"
+        >
+          <!-- <div class="input-container">
               <input type="text" id="username" placeholder="First Name" name="username" required>
               <input type="text" id="password" placeholder="Last Name" name="password" required>
             </div> -->
-            <div class="input-container">
-              <textarea type="text" id="questions-comments" placeholder="Questions/Comments" name="questions-comments" required></textarea>
+          <div class="input-container">
+            <div id="name-input">
+              <input
+                type="text"
+                id="fname"
+                placeholder="First Name"
+                name="fname"
+                required
+              />
+              <input
+                type="text"
+                id="lname"
+                placeholder="Last Name"
+                name="lname"
+                required
+              />
             </div>
-            <input id="submit" type="submit" value="Send">
-            <div class="centered-line"></div>
-          </form>
+            <textarea
+              type="text"
+              id="questions-comments"
+              placeholder="Questions/Comments"
+              name="questions-comments"
+              required
+            ></textarea>
+          </div>
+          <input id="submit" type="submit" value="Send" />
+          <div class="centered-line"></div>
+        </form>
       </div>
     </main>
     <footer class="lato">

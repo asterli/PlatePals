@@ -1,6 +1,7 @@
 {
   "recipes": [
     {
+      "id": "spaghetti",
       "title": "Classic Spaghetti Carbonara",
       "author": "Jeromy Chang",
       "description": "A traditional Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
@@ -23,7 +24,6 @@
       ],
       "image": "images/spaghetti.png",
       "category": "Pasta",
-      "rating": 4.8,
       "comments": [
         {
           "user": "User123",
@@ -36,6 +36,7 @@
       ]
     },
     {
+      "id": "cookie",
       "title": "Classic Chocolate Chip Cookies",
       "author": "Justin Chung",
       "description": "Soft and chewy chocolate chip cookies with a perfect balance of sweetness and richness.",
@@ -63,7 +64,6 @@
       ],
       "image": "images/cookie.png",
       "category": "Dessert",
-      "rating": 4.9,
       "comments": [
         {
           "user": "BakingQueen",
@@ -76,6 +76,7 @@
       ]
     },
     {
+      "id": "parmesan",
       "title": "Chicken Parmesan",
       "author": "Aster Li",
       "description": "Tender chicken breasts coated in breadcrumbs, topped with marinara sauce and melted cheese.",
@@ -104,7 +105,6 @@
       ],
       "image": "images/parmesan.png",
       "category": "Main Dish",
-      "rating": 4.7,
       "comments": [
         {
           "user": "Foodie123",

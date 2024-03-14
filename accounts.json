@@ -14,6 +14,11 @@
             "email": "asli@scu.edu",
             "username": "aster",
             "password": "123"
+        },
+        {
+            "email": "jdchung@scu.edu",
+            "username": "justin",
+            "password": "123"
         }
     ]
 }
