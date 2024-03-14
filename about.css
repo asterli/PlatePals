@@ -16,8 +16,9 @@ nav {
 
 .hero-section {
     padding: 40px 20px;
-    padding-left: 40%;
-    padding-top: 100px;
+    padding-left: 45%;
+    padding-top: 125px;
+    line-height: 100px;
 }
 
 #about-content, nav {
@@ -37,7 +38,7 @@ nav {
 }
 
 .team {
-    margin: 75px 20%;
+    margin: 50px 10%;
 }
 
 .member1 {
@@ -52,33 +53,45 @@ nav {
     align-items: flex-start;
 }
 
+.member1 {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 3rem;
+}
+
+.member2 {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 3rem;
+}
+
 .member1 img, .member2 img {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .member1 h2, .member2 h2 {
     font-size: 40px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .member1 p, .member2 p {
+    color: var(--darkest-gray);
     font-size: 14px;
+    width: 200px;
 }
 
-/*
-.team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
+.member1 p {
+    text-align: end;
 }
 
-.member {
-    margin: 20px;
-    text-align: center;
-}
-
-.member h2 {
-    margin-top: 10px;
+.member2 p {
+    margin-top: 16rem;
 }
