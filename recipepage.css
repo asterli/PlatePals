@@ -1,11 +1,8 @@
-body {
-  font-family: "Lato", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap");
 
 nav {
   background-color: transparent;
   margin-bottom: 2rem;
-  gap: 3rem;
 }
 
 .container {
@@ -14,6 +11,12 @@ nav {
   align-items: center;
   overflow: hidden;
   background: #fff;
+}
+
+#description {
+  margin: 2rem 0;
+  width: 70%;
+  text-align: center;
 }
 img {
   max-width: 100%;
@@ -50,12 +53,12 @@ nav {
 
 .title {
   color: black;
+  margin-bottom: 1rem;
 }
-.ingredients,
-.instructions,
+
 .comments,
 .comment-form {
-  width: 90%;
+  width: 70%;
 }
 
 .ingredients {
@@ -64,6 +67,25 @@ nav {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+
+.instructions {
+  width: 50%;
+}
+
+.ingredients,
+.instructions {
+  border-radius: 2rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.instruction_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .comments h3 {
@@ -98,8 +120,9 @@ nav {
 }
 
 .comment-form input[type="text"]::placeholder,
-.comment-form textarea::placeholder {
-  font-family: "Lato", sans-serif;
+.comment-form textarea::placeholder,
+.comment-form input[type="submit"] {
+  font-family: "Rufina", sans-serif;
 }
 
 .comment-form input[type="submit"] {
