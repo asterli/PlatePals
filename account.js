@@ -26,6 +26,31 @@ function generateRecipeCards(recipes) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  var modal = document.getElementById('addRecipeModal');
+  var btn = document.getElementById('add-recipe');
+  var span = document.getElementsByClassName('close-button')[0];
+
+  btn.onclick = function() {
+    modal.style.display = 'block';
+    document.body.classList.add('modal-active'); 
+  }
+
+  span.onclick = function() {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-active'); 
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-active'); 
+    }
+  }
+});
+
+
+
 // Fetch JSON data from an external file
 fetch("recipes.json")
   .then((response) => {

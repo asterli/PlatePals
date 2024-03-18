@@ -19,11 +19,63 @@
           <li><a href="discover.html">Discover Recipes</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </div>
-        <li><a href="account.html">My Account</a></li>
+        <li><a class="active" href="account.html">My Account</a></li>
       </ul>
     </nav>
     <main>
+      <div id="addRecipeModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Add Your Recipe</h2>
+          <form id="recipeForm">
+            <input
+              type="text"
+              id="recipeTitle"
+              name="recipeTitle"
+              placeholder="Title"
+              required
+            />
+            <input
+              type="text"
+              id="recipeTag"
+              name="recipeTag"
+              placeholder="Tags (Separate by line)"
+              required
+            />
+            <textarea
+              class="lato"
+              id="recipeDescription"
+              name="recipeDescription"
+              placeholder="Description"
+              required
+            ></textarea>
+            <textarea
+              class="lato"
+              id="recipeIngredients"
+              name="recipeIngredients"
+              placeholder="Ingredients (Separate by line)"
+              required
+            ></textarea>
+            <textarea
+              class="lato"
+              id="recipeInstructions"
+              name="recipeInstructions"
+              placeholder="Instructions (Separate by line)"
+              required
+            ></textarea>
+            <input
+              type="file"
+              id="recipeImage"
+              name="recipeImage"
+              accept="image/*"
+            />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+
       <h1>My Recipes</h1>
+      <button id="add-recipe" class="lato">Add Recipe</button>
       <div id="recipe-container" class="recipe-container"></div>
     </main>
     <footer class="lato">
