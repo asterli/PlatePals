@@ -26,33 +26,53 @@ function generateRecipeCards(recipes) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var modal = document.getElementById('addRecipeModal');
-  var btn = document.getElementById('add-recipe');
-  var span = document.getElementsByClassName('close-button')[0];
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("addRecipeModal");
+  var btn = document.getElementById("add-recipe");
+  var span = document.getElementsByClassName("close-button")[0];
 
-  btn.onclick = function() {
-    modal.style.display = 'block';
-    document.body.classList.add('modal-active'); 
-  }
+  btn.onclick = function () {
+    modal.style.display = "block";
+    document.body.classList.add("modal-active");
+  };
 
-  span.onclick = function() {
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-active'); 
-  }
+  span.onclick = function () {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-active");
+  };
 
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = 'none';
-      document.body.classList.remove('modal-active'); 
+      modal.style.display = "none";
+      document.body.classList.remove("modal-active");
     }
-  }
+  };
+
+  document
+    .getElementById("recipeForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the default form submission
+
+      var formData = new FormData(this); // 'this' refers to the form element
+
+      fetch("addRecipe.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+          document.getElementById("addRecipeModal").style.display = "none";
+          window.location.reload();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
 });
 
-
-
-// Fetch JSON data from an external file
-fetch("recipes.json")
+// Fetch recipes from account.php
+fetch("account.php")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -62,4 +82,4 @@ fetch("recipes.json")
   .then((data) => {
     generateRecipeCards(data.recipes);
   })
-  .catch((error) => console.error("Error fetching JSON:", error));
+  .catch((error) => console.error("Error fetching recipes:", error));

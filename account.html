@@ -27,7 +27,12 @@
         <div class="modal-content">
           <span class="close-button">&times;</span>
           <h2>Add Your Recipe</h2>
-          <form id="recipeForm">
+          <form
+            id="recipeForm"
+            action="addRecipe.php"
+            method="post"
+            enctype="multipart/form-data"
+          >
             <input
               type="text"
               id="recipeTitle"
@@ -68,6 +73,7 @@
               id="recipeImage"
               name="recipeImage"
               accept="image/*"
+              required
             />
             <input type="submit" value="Submit" />
           </form>
