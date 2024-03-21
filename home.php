@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="base.css" />
     <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rufina:wght@700&display=swap" rel="stylesheet">
     <title>PlatePals - Find Your Favorite Recipes!</title>
   </head>
   <body>
