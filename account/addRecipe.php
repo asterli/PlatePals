@@ -57,7 +57,8 @@ try {
         ':category' => $_POST['recipeCategory'],
     ]);
 
-    echo json_encode(['success' => true, 'message' => 'Recipe added successfully.']);
+    $lastId = $pdo->lastInsertId();
+    echo json_encode(['success' => true, 'message' => 'Recipe added successfully.', 'id' => $lastId]);
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
 }

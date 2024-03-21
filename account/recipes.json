@@ -26,11 +26,11 @@
       "category": "Pasta",
       "comments": [
         {
-          "user": "User123",
+          "name": "User123",
           "comment": "This was absolutely delicious! My family loved it."
         },
         {
-          "user": "CookingFanatic",
+          "name": "CookingFanatic",
           "comment": "Great recipe! I added some extra garlic for more flavor."
         }
       ]
@@ -66,11 +66,11 @@
       "category": "Dessert",
       "comments": [
         {
-          "user": "BakingQueen",
+          "name": "BakingQueen",
           "comment": "These cookies turned out perfectly! Just the right amount of chewiness."
         },
         {
-          "user": "SweetTooth",
+          "name": "SweetTooth",
           "comment": "My favorite chocolate chip cookie recipe! They disappear quickly every time I make them."
         }
       ]
@@ -107,11 +107,11 @@
       "category": "Main Dish",
       "comments": [
         {
-          "user": "Foodie123",
+          "name": "Foodie123",
           "comment": "One of my go-to recipes for dinner parties! Always a crowd-pleaser."
         },
         {
-          "user": "CookingNovice",
+          "name": "CookingNovice",
           "comment": "I was nervous to try making chicken parmesan, but this recipe was easy to follow and turned out delicious!"
         }
       ]

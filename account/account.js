@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
           console.log("Success:", data);
           document.getElementById("addRecipeModal").style.display = "none";
-          window.location.reload();
+          window.location.href = `../recipepage/recipepage.html?id=${data.id}`;
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -83,6 +83,26 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => console.error("Error signing out:", error));
     });
   }
+  var imageInput = document.getElementById("recipeImage");
+  var imagePreviewContainer = document.getElementById("imagePreviewContainer");
+  var imagePreview = document.getElementById("imagePreview");
+
+  imageInput.addEventListener("change", function () {
+    var file = this.files[0];
+    if (file) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        imagePreview.src = e.target.result;
+        imagePreviewContainer.style.display = "block";
+      };
+
+      reader.readAsDataURL(file);
+    } else {
+      imagePreview.src = "";
+      imagePreviewContainer.style.display = "none";
+    }
+  });
 });
 
 // Fetch recipes from account.php
