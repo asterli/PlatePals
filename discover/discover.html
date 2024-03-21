@@ -1,86 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../base.css" />
-    <link rel="stylesheet" type="text/css" href="discover.css" />
-    <title>PlatePals - Discover Recipes</title>
-  </head>
-  <body>
-    <nav class="rufina">
-      <ul>
-        <li id="logo">
-          <a href="../home.php"><img width="60px" src="../images/logo.png" /></a>
-        </li>
-        <div id="middle-nav">
-          <li><a href="../about/about.html">About</a></li>
-          <li><a class="active" href="discover.html">Discover Recipes</a></li>
-          <li><a href="../contact/contact.html">Contact Us</a></li>
-        </div>
-        <li><a href="../account/account.html">My Account</a></li>
-      </ul>
-    </nav>
-    <main>
-      <div id="top-bar">
-        <div class="lato categories">
-          <a href="#"><p>All</p></a>
-          <a href="#"><p>Starter</p></a>
-          <a href="#"><p>Lunch</p></a>
-          <a href="#"><p>Dinner</p></a>
-          <a href="#"><p>Drinks</p></a>
-          <a href="#"><p>Sweets</p></a>
-          <a href="#"><p>Fruits</p></a>
-        </div>
-        <div class="search-box">
-          <input type="text" placeholder="Search" />
-          <input type="submit" value="Submit" />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../base.css" />
+  <link rel="stylesheet" type="text/css" href="discover.css" />
+  <title>PlatePals - Discover Recipes</title>
+</head>
+<body>
+  <nav class="rufina">
+    <ul>
+      <li id="logo">
+        <a href="../home.php"><img width="60px" src="../images/logo.png" /></a>
+      </li>
+      <div id="middle-nav">
+        <li><a href="../about/about.html">About</a></li>
+        <li><a class="active" href="discover.html">Discover Recipes</a></li>
+        <li><a href="../contact/contact.html">Contact Us</a></li>
       </div>
-      <div class="recipe-grid">
-        <div class="recipe-card">
-          <div class="tint-fade"></div>
-          <div class="recipe-desc">
-            <h3 class="rufina">
-              Braised Sliced Abalone, Fish Maw with Premium Seafood
-            </h3>
-            <p class="lato">Cold Dishes • Starters</p>
-          </div>
-        </div>
-        <div id="spaghetti" class="recipe-card">
-          <div class="tint-fade"></div>
-          <h3 class="rufina">Classic Spaghetti Carbonara</h3>
-          <p class="lato">Pasta</p>
-        </div>
-        <div id="parmesan" class="recipe-card">
-          <div class="tint-fade"></div>
-          <h3 class="rufina">Chicken Parmesan</h3>
-          <p class="lato">Main Dish</p>
-        </div>
-        <div class="recipe-card">
-          <div class="tint-fade"></div>
-          <h3 class="rufina">
-            Braised Sliced Abalone, Fish Maw with Premium Seafood
-          </h3>
-          <p class="lato">Cold Dishes • Starters</p>
-        </div>
-        <div class="recipe-card">
-          <div class="tint-fade"></div>
-          <h3 class="rufina">
-            Braised Sliced Abalone, Fish Maw with Premium Seafood
-          </h3>
-          <p class="lato">Cold Dishes • Starters</p>
-        </div>
-        <div id="cookie" class="recipe-card">
-          <div class="tint-fade"></div>
-          <h3 class="rufina">Classic Chocolate Chip Cookies</h3>
-          <p class="lato">Desert</p>
-        </div>
+      <li><a href="../account/account.html">My Account</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div id="top-bar">
+      <div class="lato categories">
+        <a href="#"><p>All</p></a>
+        <a href="#"><p>Starter</p></a>
+        <a href="#"><p>Lunch</p></a>
+        <a href="#"><p>Dinner</p></a>
+        <a href="#"><p>Drinks</p></a>
+        <a href="#"><p>Sweets</p></a>
+        <a href="#"><p>Fruits</p></a>
       </div>
-      <button>View More</button>
-    </main>
-    <footer class="lato">
-      <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
-    </footer>
-  </body>
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <input type="submit" value="Submit" />
+      </div>
+    </div>
+    <div class="recipe-grid" id="recipeGrid">
+      <!-- Recipe cards will be dynamically added here -->
+    </div>
+    <button id="viewMoreBtn">View More</button>
+  </main>
+  <footer class="lato">
+    <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
+  </footer>
+  <script src="discover.js"></script>
+</body>
 </html>
