@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="base.css" />
+    <link rel="stylesheet" type="text/css" href="../base.css" />
     <link rel="stylesheet" type="text/css" href="home.css" />
     <title>PlatePals - Find Your Favorite Recipes!</title>
   </head>
   <body>
+    <?php session_start(); ?>
     <nav class="rufina">
       <ul>
         <li class="rufina" id="home-name">PlatePals</li>
-        <!-- <li id="logo">
-          <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
-        </li> -->
         <div id="end-nav">
+          <?php if (isset($_SESSION['user_id'])): ?>
+          <li><a href="/account/account.html">My Account</a></li>
+          <li><a href="/account/signout.php">Sign Out</a></li>
+          <?php else: ?>
           <li><a href="/login/login.html">Login</a></li>
           <li><a href="/signup/signup.html">Sign Up</a></li>
+          <?php endif; ?>
         </div>
       </ul>
     </nav>
