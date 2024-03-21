@@ -16,14 +16,21 @@ try {
     $pdo = new PDO('sqlite:' . $databaseFile);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt = $pdo->prepare("INSERT INTO comments (recipe_id, name, text) VALUES (:recipe_id, :name, :text)");
-    $stmt->execute([
-        ':recipe_id' => $recipeId,
-        ':name' => $name,
-        ':text' => $commentText,
-    ]);
+    $stmt = $pdo->prepare("SELECT comments FROM recipes WHERE id = :id");
+    $stmt->execute([':id' => $recipeId]);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo json_encode(['success' => true, 'comment' => ['name' => $name, 'text' => $commentText]]);
+    if ($result) {
+        $currentComments = json_decode($result['comments'], true);
+        $currentComments[] = ['name' => $name, 'comment' => $commentText];
+        $updatedComments = json_encode($currentComments);
+        $updateStmt = $pdo->prepare("UPDATE recipes SET comments = :comments WHERE id = :id");
+        $updateStmt->execute([':comments' => $updatedComments, ':id' => $recipeId]);
+
+        echo json_encode(['success' => true, 'comment' => ['name' => $name, 'text' => $commentText]]);
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Recipe not found']);
+    }
 } catch (PDOException $e) {
     echo json_encode(['success' => false, 'message' => 'Database error: ' . $e->getMessage()]);
 }

@@ -1,4 +1,3 @@
-// Define a function to generate recipe cards
 function generateRecipeCards(recipes) {
   const recipeContainer = document.getElementById("recipe-container");
 
@@ -6,9 +5,8 @@ function generateRecipeCards(recipes) {
     const card = document.createElement("div");
     card.classList.add("recipe-card");
 
-    // Create an anchor tag with href pointing to the recipe page
     const recipeLink = document.createElement("a");
-    recipeLink.href = `recipepage.html?id=${recipe.id}`; // Assuming you have a recipe page named recipe.html with a query parameter id
+    recipeLink.href = `recipepage.html?id=${recipe.id}`;
 
     recipeLink.innerHTML = `
       <div class="recipe-image">
@@ -51,10 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("recipeForm")
     .addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent the default form submission
-
-      var formData = new FormData(this); // 'this' refers to the form element
-
+      e.preventDefault();
+      var formData = new FormData(this);
       fetch("addRecipe.php", {
         method: "POST",
         body: formData,

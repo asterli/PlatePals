@@ -23,9 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("h3").textContent = `By ${recipe.author}`;
     document.getElementById("description").textContent = recipe.description;
 
-    // Populate ingredients
     const ingredientsList = document.querySelector(".ingredients ul");
-    ingredientsList.innerHTML = "";
     recipe.ingredients.forEach((ingredient) => {
       const li = document.createElement("li");
       li.textContent = ingredient;
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const instructionsList = document.querySelector(".instructions ol");
-    instructionsList.innerHTML = "";
     recipe.instructions.forEach((step) => {
       const li = document.createElement("li");
       li.textContent = step;
@@ -46,12 +43,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const commentsDiv = document.querySelector(".comments");
-    commentsDiv.innerHTML = '<h2 class="title">Comments</h2>';
+    commentsDiv.innerHTML = '<h2 class="title">Comments</h2>'; // Reset comments section
     recipe.comments.forEach((comment) => {
       const commentElement = document.createElement("div");
       commentElement.innerHTML = `<strong>${comment.name}</strong><p>${comment.comment}</p>`;
       commentsDiv.appendChild(commentElement);
     });
+
+    document
+      .querySelector(".comment-form form")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const recipeId = new URLSearchParams(window.location.search).get("id");
+        if (recipeId) {
+          formData.append("recipeId", recipeId);
+        }
+
+        fetch("saveComment.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              const commentsDiv = document.querySelector(".comments");
+              const newCommentDiv = document.createElement("div");
+              newCommentDiv.innerHTML = `<strong>${data.comment.name}</strong><p>${data.comment.text}</p>`;
+              commentsDiv.appendChild(newCommentDiv);
+              document.getElementById("name").value = "";
+              document.getElementById("comment").value = "";
+            } else {
+              console.error("Failed to save comment:", data.message);
+            }
+          })
+          .catch((error) => console.error("Error submitting comment:", error));
+      });
   }
 
   const recipeId = getQueryParam("id");
