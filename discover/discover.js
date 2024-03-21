@@ -1,8 +1,26 @@
 // discover.js
 
 window.onload = function() {
+    loadRecipes(); // Load all recipes on page load
+  
+    // Add event listener for search input keyup event
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+      var searchQuery = this.value.trim(); // Get search query from input field
+      if (searchQuery !== '') {
+        fetchRecipes(searchQuery); // Call function to fetch recipes based on search query
+      } else {
+        loadRecipes(); // If search query is empty, load all recipes
+      }
+    });
+  };
+  
+  function loadRecipes() {
+    fetchRecipes(''); // Load all recipes initially
+  }
+  
+  function fetchRecipes(searchQuery) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'discover.php', true);
+    xhr.open('GET', 'discover.php?q=' + encodeURIComponent(searchQuery), true); // Pass search query as parameter
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -15,7 +33,7 @@ window.onload = function() {
       }
     };
     xhr.send();
-  };
+  }
   
   function displayRecipes(recipes) {
     var recipeGrid = document.getElementById('recipeGrid');
