@@ -47,7 +47,8 @@ main {
   align-items: center;
 }
 
-#add-recipe {
+#add-recipe,
+#sign-out {
   margin-bottom: 2rem;
   padding: 1rem 2rem;
   border: 1px solid #ddd;
@@ -59,6 +60,10 @@ main {
   text-decoration: none;
   color: var(--black);
   cursor: pointer;
+}
+
+#sign-out {
+  margin-top: 2rem;
 }
 
 .modal {

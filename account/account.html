@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="base.css" />
+    <link rel="stylesheet" type="text/css" href="../base.css" />
     <link rel="stylesheet" type="text/css" href="account.css" />
     <script src="account.js"></script>
     <title>My Recipes</title>
@@ -12,12 +12,12 @@
     <nav class="rufina">
       <ul>
         <li id="logo">
-          <a href="home.html"><img width="60px" src="./images/logo.png" /></a>
+          <a href="../home.html"><img width="60px" src="../images/logo.png" /></a>
         </li>
         <div id="middle-nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="discover.html">Discover Recipes</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../discover/discover.html">Discover Recipes</a></li>
+          <li><a href="../contact/contact.html">Contact Us</a></li>
         </div>
         <li><a class="active" href="account.html">My Account</a></li>
       </ul>
@@ -42,8 +42,8 @@
             />
             <input
               type="text"
-              id="recipeTag"
-              name="recipeTag"
+              id="recipeCategory"
+              name="recipeCategory"
               placeholder="Tags (Separate by line)"
               required
             />
@@ -83,6 +83,7 @@
       <h1>My Recipes</h1>
       <button id="add-recipe" class="lato">Add Recipe</button>
       <div id="recipe-container" class="recipe-container"></div>
+      <button id="sign-out" class="lato">Sign Out</button>
     </main>
     <footer class="lato">
       <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>

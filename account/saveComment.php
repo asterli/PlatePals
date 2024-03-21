@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-$databaseFile = 'recipes.db';
+$databaseFile = '../recipes.db';
 $name = $_POST['name'] ?? '';
 $commentText = $_POST['comment'] ?? '';
 $recipeId = $_POST['recipeId'] ?? '';

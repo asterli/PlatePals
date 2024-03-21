@@ -52,7 +52,7 @@ main {
 }
 
 .search-box input[type="submit"] {
-  background: url("images/search-icon.png") no-repeat center center;
+  background: url("../images/search-icon.png") no-repeat center center;
   text-indent: -9999px;
   border: none;
   cursor: pointer;
@@ -74,7 +74,7 @@ main {
 
 .recipe-card {
   width: 400px;
-  background-image: url("images/prawn.png");
+  background-image: url("../images/prawn.png");
   height: 600px;
   position: relative;
   background-size: cover;
@@ -91,15 +91,15 @@ p {
 }
 
 #spaghetti {
-  background-image: url("images/spaghetti.png");
+  background-image: url("../images/recipes/spaghetti.png");
 }
 
 #cookie {
-  background-image: url("images/cookie.png");
+  background-image: url("../images/recipes/cookie.png");
 }
 
 #parmesan {
-  background-image: url("images/parmesan.png");
+  background-image: url("../images/recipes/parmesan.png");
 }
 
 .recipe-card h3 {

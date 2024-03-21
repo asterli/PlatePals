@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "id": "spaghetti",
+      "id": "1",
       "title": "Classic Spaghetti Carbonara",
       "author": "Jeromy Chang",
       "description": "A traditional Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
@@ -22,7 +22,7 @@
         "Remove skillet from heat. Quickly pour the egg and cheese mixture over the hot spaghetti, tossing continuously to coat the pasta. If the sauce is too thick, add reserved pasta water gradually until desired consistency is reached.",
         "Serve immediately, garnished with chopped parsley and additional grated cheese if desired."
       ],
-      "image": "images/spaghetti.png",
+      "image": "../images/recipes/spaghetti.png",
       "category": "Pasta",
       "comments": [
         {
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "id": "cookie",
+      "id": "2",
       "title": "Classic Chocolate Chip Cookies",
       "author": "Justin Chung",
       "description": "Soft and chewy chocolate chip cookies with a perfect balance of sweetness and richness.",
@@ -62,7 +62,7 @@
         "Bake in preheated oven for 9 to 11 minutes, or until the edges are golden brown.",
         "Allow cookies to cool on baking sheets for 5 minutes before transferring to wire racks to cool completely."
       ],
-      "image": "images/cookie.png",
+      "image": "../images/recipes/cookie.png",
       "category": "Dessert",
       "comments": [
         {
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "id": "parmesan",
+      "id": "3",
       "title": "Chicken Parmesan",
       "author": "Aster Li",
       "description": "Tender chicken breasts coated in breadcrumbs, topped with marinara sauce and melted cheese.",
@@ -103,7 +103,7 @@
         "Bake in preheated oven for 15-20 minutes, or until the cheese is melted and bubbly.",
         "Garnish with chopped fresh basil before serving."
       ],
-      "image": "images/parmesan.png",
+      "image": "../images/recipes/parmesan.png",
       "category": "Main Dish",
       "comments": [
         {

@@ -6,7 +6,7 @@ function generateRecipeCards(recipes) {
     card.classList.add("recipe-card");
 
     const recipeLink = document.createElement("a");
-    recipeLink.href = `recipepage.html?id=${recipe.id}`;
+    recipeLink.href = `../recipepage/recipepage.html?id=${recipe.id}`;
 
     recipeLink.innerHTML = `
       <div class="recipe-image">
@@ -65,6 +65,24 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("Error:", error);
         });
     });
+
+  const signOutButton = document.getElementById("sign-out");
+
+  if (signOutButton) {
+    signOutButton.addEventListener("click", function () {
+      fetch("signout.php", {
+        method: "POST",
+      })
+        .then((response) => {
+          if (response.ok) {
+            window.location.href = "../login/login.html";
+          } else {
+            console.error("Sign out failed.");
+          }
+        })
+        .catch((error) => console.error("Error signing out:", error));
+    });
+  }
 });
 
 // Fetch recipes from account.php
@@ -76,6 +94,7 @@ fetch("account.php")
     return response.json();
   })
   .then((data) => {
+    console.log(data);
     generateRecipeCards(data.recipes);
   })
   .catch((error) => console.error("Error fetching recipes:", error));

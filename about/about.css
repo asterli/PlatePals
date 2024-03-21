@@ -1,6 +1,6 @@
 #about-header {
   width: 100%;
-  background-image: url("images/about-background.png");
+  background-image: url("../images/about-background.png");
   height: 600px;
   position: relative;
   background-size: cover;

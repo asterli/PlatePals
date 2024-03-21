@@ -1,15 +1,24 @@
 <?php
 
+session_start(); // Ensure session start at the beginning to access session variables
 header('Content-Type: application/json');
 
-$databaseFile = 'recipes.db';
+$databaseFile = '../recipes.db';
+
+if (!isset($_SESSION['user_id'])) {
+    // If there's no user_id in the session, return an error or empty array
+    echo json_encode(["error" => "User not logged in"]);
+    exit;
+}
 
 try {
     $pdo = new PDO('sqlite:' . $databaseFile);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $query = "SELECT * FROM recipes";
-    $stmt = $pdo->query($query);
+    // Fetch recipes specific to the logged-in user by using their user_id from the session
+    $query = "SELECT * FROM recipes WHERE user_id = :user_id";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([':user_id' => $_SESSION['user_id']]);
 
     $recipes = [];
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
