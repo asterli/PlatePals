@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +9,7 @@
     <title>PlatePals - Find Your Favorite Recipes!</title>
   </head>
   <body>
-    <?php session_start(); ?>
+    
     <nav class="rufina">
       <ul>
         <li class="rufina" id="home-name">PlatePals</li>
