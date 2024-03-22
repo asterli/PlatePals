@@ -20,8 +20,8 @@
           <li><a href="/account/account.html">My Account</a></li>
           <li><a href="/account/signout.php">Sign Out</a></li>
           <?php else: ?>
-          <li><a href="/login/login.html">Login</a></li>
-          <li><a href="/signup/signup.html">Sign Up</a></li>
+          <li><a href="/login/login.php">Login</a></li>
+          <li><a href="/signup/signup.pho">Sign Up</a></li>
           <?php endif; ?>
         </div>
       </ul>
