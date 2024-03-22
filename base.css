@@ -94,6 +94,10 @@ nav a {
   color: white;
 }
 
+textarea {
+  resize: none;
+}
+
 #middle-nav {
   display: flex;
   gap: 5rem;

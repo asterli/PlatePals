@@ -45,13 +45,53 @@
               placeholder="Title"
               required
             />
-            <input
-              type="text"
-              id="recipeCategory"
-              name="recipeCategory"
-              placeholder="Tags (Separate by line)"
-              required
-            />
+
+            <!-- Updated select element for multiple selections -->
+            <div id="categoryButtons" class="category-buttons">
+              <button
+                type="button"
+                class="category-button"
+                data-value="Breakfast"
+              >
+                Breakfast
+              </button>
+              <button type="button" class="category-button" data-value="Lunch">
+                Lunch
+              </button>
+              <button type="button" class="category-button" data-value="Dinner">
+                Dinner
+              </button>
+              <button
+                type="button"
+                class="category-button"
+                data-value="Appetizer"
+              >
+                Appetizer
+              </button>
+              <button type="button" class="category-button" data-value="Salad">
+                Salad
+              </button>
+              <button
+                type="button"
+                class="category-button"
+                data-value="Main-course"
+              >
+                Main-course
+              </button>
+              <button
+                type="button"
+                class="category-button"
+                data-value="Dessert"
+              >
+                Dessert
+              </button>
+              <button type="button" class="category-button" data-value="Snack">
+                Snack
+              </button>
+            </div>
+            <!-- Hidden input to store the selected categories -->
+            <input type="hidden" name="recipeCategory" id="recipeCategory" />
+
             <textarea
               class="lato"
               id="recipeDescription"

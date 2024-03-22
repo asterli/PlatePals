@@ -24,6 +24,19 @@ function generateRecipeCards(recipes) {
   });
 }
 
+document.querySelectorAll(".category-button").forEach((button) => {
+  button.addEventListener("click", function () {
+    this.classList.toggle("selected");
+
+    const selectedCategories = Array.from(
+      document.querySelectorAll(".category-button.selected")
+    ).map((btn) => btn.getAttribute("data-value"));
+
+    document.getElementById("recipeCategory").value =
+      selectedCategories.join(", ");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("addRecipeModal");
   var btn = document.getElementById("add-recipe");

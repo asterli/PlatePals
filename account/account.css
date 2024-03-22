@@ -80,12 +80,12 @@ main {
 
 .modal-content {
   background-color: #eafaff;
-  margin: auto; /* Changed from margin: 15% auto; for better centering */
+  margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  position: relative; /* Add this to ensure it's positioned correctly within the modal */
-  top: 10%;
+  position: relative;
+  top: 5%;
 }
 
 body.modal-active {
@@ -106,7 +106,9 @@ body.modal-active {
   width: 60%;
 }
 
-#recipeDescription {
+#recipeDescription,
+#recipeIngredients,
+#recipeInstructions {
   height: 100px;
 }
 
@@ -159,4 +161,20 @@ input[type="submit"] {
   height: auto;
   border: 2px solid black;
   border-radius: 8px;
+}
+
+.category-buttons button {
+  border: 2px solid #0c869c;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 2.5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category-buttons button.selected {
+  background-color: #0c869c;
+  color: #fff;
 }
