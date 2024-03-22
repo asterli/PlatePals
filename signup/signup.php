@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main>
         <div id="create-text">
             <h1>Create an account!</h1>
-            <h3>Stay up to date with the latest recipes!</h3>
+            <h3>Stay up to date with the latest recipes</h3>
             <h4>Don’t miss out! Sign up now and get all the new recipes first.</h4>
         </div>
         <form id="signup-form" action="signup.php" method="post">

@@ -67,3 +67,67 @@ function displayRecipes(recipes) {
     recipeGrid.appendChild(recipeLink);
   });
 }
+
+// let includedCategory = '';
+// initialize();
+
+// function createTag(tagName) {
+//     const newButton = document.createElement('button');
+//     newButton.classList.add('tag');
+//     newButton.textContent = tagName;
+//     newButton.addEventListener('click', function() {
+//         let url = new URL(window.location.href);
+// 		url.searchParams.delete('tag', tagName.trim().toLowerCase());
+// 		history.pushState({}, '', url.href);
+//         newButton.remove();
+//         const indexRemove = includedTags.indexOf(tagName.trim().toLowerCase());
+//         if (indexRemove != -1){
+//             includedTags.splice(indexRemove, 1);
+//         }
+//         hideArticles();
+//     });
+//     return newButton;
+// }
+
+// function hideArticles() {
+//     const articles = document.querySelectorAll('article');
+//     if (includedTags.length == 0) {
+//         articles.forEach(article => {
+//             article.classList.remove('hidden');
+//         });
+//         return;
+//     } else {
+//         let includedArticles = [];
+//         articles.forEach(article => {
+//             const tags = article.querySelectorAll('.tag');
+//             tags.forEach(tag => {
+//                 if (includedTags.includes(tag.textContent.trim().toLowerCase())){
+//                     includedArticles.push(article);
+//                 }
+//             });
+//             if (includedArticles.includes(article)){
+//                 article.classList.remove('hidden');
+//             } else {
+//                 article.classList.add('hidden');
+//             }
+//         });
+//     }
+//     return;
+// }
+
+// function addSearchTerm(searchTerm) {
+//     const trimTerm = searchTerm.trim().toLowerCase();
+//     includedCategory = trimTerm;
+//     hideArticles();
+//     let url = new URL(window.location.href);
+//     url.searchParams.append('category', trimTerm);
+//     history.pushState({}, '', url.href);
+// }
+
+// function initialize() {
+//     const params = new URLSearchParams(window.location.search);
+//     params.getAll('category').forEach(category => {
+//         addSearchTerm(category.trim().toLowerCase());
+//     })
+//     return;
+// }

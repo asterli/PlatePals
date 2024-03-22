@@ -23,7 +23,10 @@
         "Serve immediately, garnished with chopped parsley and additional grated cheese if desired."
       ],
       "image": "../images/recipes/spaghetti.png",
-      "category": "Pasta",
+      "category": [
+        "Lunch",
+        "Dinner"
+      ],
       "comments": [
         {
           "name": "User123",
@@ -63,7 +66,9 @@
         "Allow cookies to cool on baking sheets for 5 minutes before transferring to wire racks to cool completely."
       ],
       "image": "../images/recipes/cookie.png",
-      "category": "Dessert",
+      "category": [
+        "Dessert"
+      ],
       "comments": [
         {
           "name": "BakingQueen",
@@ -104,7 +109,9 @@
         "Garnish with chopped fresh basil before serving."
       ],
       "image": "../images/recipes/parmesan.png",
-      "category": "Main Dish",
+      "category": [
+        "Dinner"
+      ],
       "comments": [
         {
           "name": "Foodie123",

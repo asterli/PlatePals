@@ -22,7 +22,7 @@ main {
 }
 
 .categories a:hover {
-  color: #3498db;
+  color: var(--accent-color);
 }
 
 #top-bar {
