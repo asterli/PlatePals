@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => {
           if (response.ok) {
-            window.location.href = "../login/login.html";
+            window.location.href = "../login/login.php";
           } else {
             console.error("Sign out failed.");
           }
