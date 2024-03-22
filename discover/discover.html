@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="../base.css" />
-  <link rel="stylesheet" type="text/css" href="discover.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rufina:wght@700&display=swap" rel="stylesheet">
-  <title>PlatePals - Discover Recipes</title>
-</head>
-<body>
-  <nav class="rufina">
-    <ul>
-      <li id="logo">
-        <a href="../home.php"><img width="60px" src="../images/logo.png" /></a>
-      </li>
-      <div id="middle-nav">
-        <li><a href="../about/about.html">About</a></li>
-        <li><a class="active" href="discover.html">Discover Recipes</a></li>
-        <li><a href="../contact/contact.html">Contact Us</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../base.css" />
+    <link rel="stylesheet" type="text/css" href="discover.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Rufina:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>PlatePals - Discover Recipes</title>
+  </head>
+  <body>
+    <nav class="rufina">
+      <ul>
+        <li id="logo">
+          <img width="60px" src="../images/logo.png" />
+        </li>
+        <div id="middle-nav">
+          <li><a href="../about/about.html">About</a></li>
+          <li><a class="active" href="discover.html">Discover Recipes</a></li>
+          <li><a href="../contact/contact.html">Contact Us</a></li>
+        </div>
+        <li><a href="../account/account.html">My Account</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="top-bar">
+        <div class="lato categories">
+          <a href="#"><p>All</p></a>
+          <a href="#"><p>Starter</p></a>
+          <a href="#"><p>Lunch</p></a>
+          <a href="#"><p>Dinner</p></a>
+          <a href="#"><p>Drinks</p></a>
+          <a href="#"><p>Sweets</p></a>
+          <a href="#"><p>Fruits</p></a>
+        </div>
+        <div class="search-box">
+          <form id="searchForm">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by recipe name"
+            />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
       </div>
-      <li><a href="../account/account.html">My Account</a></li>
-    </ul>
-  </nav>
-  <main>
-    <div id="top-bar">
-      <div class="lato categories">
-        <a href="#"><p>All</p></a>
-        <a href="#"><p>Starter</p></a>
-        <a href="#"><p>Lunch</p></a>
-        <a href="#"><p>Dinner</p></a>
-        <a href="#"><p>Drinks</p></a>
-        <a href="#"><p>Sweets</p></a>
-        <a href="#"><p>Fruits</p></a>
+      <div class="recipe-grid" id="recipeGrid">
+        <!-- Recipe cards will be dynamically added here -->
       </div>
-      <div class="search-box">
-        <form id="searchForm">
-          <input type="text" id="searchInput" placeholder="Search by recipe name" />
-          <input type="submit" value="Search" />
-        </form>
-      </div>
-    </div>
-    <div class="recipe-grid" id="recipeGrid">
-      <!-- Recipe cards will be dynamically added here -->
-    </div>
-    <button id="viewMoreBtn">View More</button>
-  </main>
-  <footer class="lato">
-    <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
-  </footer>
-  <script src="discover.js"></script>
-</body>
+      <button id="viewMoreBtn">View More</button>
+    </main>
+    <footer class="lato">
+      <p>&copy; 2024 PlatePals Inc. All rights Reserved</p>
+    </footer>
+    <script src="discover.js"></script>
+  </body>
 </html>
