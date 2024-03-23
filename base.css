@@ -54,15 +54,19 @@ body {
   color: var(--black);
 }
 
+input:hover{
+  cursor: pointer;
+}
+
 main {
   min-height: 100%;
-  margin-bottom: -60px;
+  margin-bottom: -80px;
 }
-main:after {
+/* main:after {
   content: "";
   display: block;
   height: 60px;
-}
+} */
 
 nav {
   font-size: 20px;

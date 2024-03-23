@@ -1,5 +1,13 @@
 function generateRecipeCards(recipes) {
   const recipeContainer = document.getElementById("recipe-container");
+  console.log(recipes);
+  if (!recipes) {
+    var message = document.createElement("p");
+    message.classList.add("lato");
+    message.classList.add("noRecipeMsg")
+    message.textContent = "No recipes added yet."
+    recipeContainer.appendChild(message);
+  }
 
   recipes.forEach((recipe) => {
     const card = document.createElement("div");

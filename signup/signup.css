@@ -12,14 +12,19 @@ h4 {
 }
 
 h1 {
-  margin-bottom: 1%;
+  margin-bottom: 2rem;
+  font-size: 50px;
 }
 h3 {
-  margin-bottom: 3px;
+  margin-bottom: 1rem;
+}
+h3, h4{
+  font-size: 20px;
 }
 #create-text {
   text-align: center;
   padding-top: 10%;
+  margin-bottom: 3rem;
 }
 form {
   display: flex;
@@ -30,7 +35,7 @@ form {
 input {
   display: flex;
   width: 60%;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   color: black;
   background-color: white;
   border: 1px solid #004c77;
@@ -42,8 +47,9 @@ input#submit {
   background-color: #004c77;
   padding-left: 0%;
   padding-right: 0;
-  width: 60%;
+  width: 15rem;
   cursor: pointer;
+  margin-top: 1.5rem;
 }
 
 #confirmPassword {

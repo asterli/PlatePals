@@ -97,6 +97,8 @@ function initialize() {
 
 function addSearchTerm(searchTerm) {
   if (selectedCategory !== searchTerm) {
+    const current = document.getElementById(searchTerm);
+    current.classList.add("active");
     selectedCategory = searchTerm;
     hideRecipes();
   }
@@ -128,6 +130,15 @@ function hideRecipes() {
         recipe.classList.add("hidden");
       }
     });
+    const hiddenRecipes = document.querySelectorAll(".hidden");
+    const allRecipes = document.querySelectorAll("section");
+    if (hiddenRecipes.length == allRecipes.length) {
+      const recipeGridContainer = document.getElementById("recipeGrid");
+      var message = document.createElement("p");
+      message.classList.add("lato");
+      message.textContent = "No recipes under this category (yet)!"
+      recipeGridContainer.appendChild(message);
+    }
   }
   return;
 }
