@@ -24,7 +24,7 @@ function fetchRecipes(searchQuery) {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         var recipes = JSON.parse(xhr.responseText);
-        displayRecipes(recipes);
+        displayRecipes(recipes, initialize);
       } else {
         console.error("Error fetching recipes:", xhr.status);
       }
@@ -33,10 +33,12 @@ function fetchRecipes(searchQuery) {
   xhr.send();
 }
 
-function displayRecipes(recipes) {
+function displayRecipes(recipes, callback) {
   var recipeGrid = document.getElementById("recipeGrid");
   recipeGrid.innerHTML = "";
   recipes.forEach(function (recipe) {
+    var recipeContainer = document.createElement("section");
+
     var recipeLink = document.createElement("a");
     recipeLink.href = `../recipepage/recipepage.html?id=${recipe.id}`;
     recipeLink.classList.add("recipe-card-link");
@@ -49,7 +51,7 @@ function displayRecipes(recipes) {
     tintFade.classList.add("tint-fade");
     recipeCard.appendChild(tintFade);
 
-    var recipeDesc = document.createElement("div");
+    var recipeDesc = document.createElement("section");
     recipeDesc.classList.add("recipe-desc");
 
     var title = document.createElement("h3");
@@ -57,77 +59,75 @@ function displayRecipes(recipes) {
     title.textContent = recipe.title;
     recipeDesc.appendChild(title);
 
-    var category = document.createElement("p");
-    category.classList.add("lato");
-    category.textContent = recipe.category;
-    recipeDesc.appendChild(category);
+    var categoryContainer = document.createElement("div");
+    categoryContainer.classList.add("category-container");
 
+    var categories = JSON.parse(recipe.category);
+    categories.forEach((categoryName, index) => {
+      var category = document.createElement("p");
+      category.classList.add("lato");
+      category.classList.add("category");
+      
+      if (index > 0) {
+        var buffer = document.createElement("p");
+        buffer.textContent = "•"
+        categoryContainer.appendChild(buffer);
+      }
+      
+      category.textContent = categoryName;
+      categoryContainer.appendChild(category);
+    });
+
+    recipeDesc.appendChild(categoryContainer);
     recipeCard.appendChild(recipeDesc);
     recipeLink.appendChild(recipeCard);
-    recipeGrid.appendChild(recipeLink);
+    recipeContainer.appendChild(recipeLink);
+    recipeGrid.appendChild(recipeContainer);
   });
+
+  callback();
 }
 
-// let includedCategory = '';
-// initialize();
+let selectedCategory = '';
 
-// function createTag(tagName) {
-//     const newButton = document.createElement('button');
-//     newButton.classList.add('tag');
-//     newButton.textContent = tagName;
-//     newButton.addEventListener('click', function() {
-//         let url = new URL(window.location.href);
-// 		url.searchParams.delete('tag', tagName.trim().toLowerCase());
-// 		history.pushState({}, '', url.href);
-//         newButton.remove();
-//         const indexRemove = includedTags.indexOf(tagName.trim().toLowerCase());
-//         if (indexRemove != -1){
-//             includedTags.splice(indexRemove, 1);
-//         }
-//         hideArticles();
-//     });
-//     return newButton;
-// }
+function initialize() {
+  const params = new URLSearchParams(window.location.search);
+  params.getAll("category").forEach(addSearchTerm);
+}
 
-// function hideArticles() {
-//     const articles = document.querySelectorAll('article');
-//     if (includedTags.length == 0) {
-//         articles.forEach(article => {
-//             article.classList.remove('hidden');
-//         });
-//         return;
-//     } else {
-//         let includedArticles = [];
-//         articles.forEach(article => {
-//             const tags = article.querySelectorAll('.tag');
-//             tags.forEach(tag => {
-//                 if (includedTags.includes(tag.textContent.trim().toLowerCase())){
-//                     includedArticles.push(article);
-//                 }
-//             });
-//             if (includedArticles.includes(article)){
-//                 article.classList.remove('hidden');
-//             } else {
-//                 article.classList.add('hidden');
-//             }
-//         });
-//     }
-//     return;
-// }
+function addSearchTerm(searchTerm) {
+  if (selectedCategory !== searchTerm) {
+    selectedCategory = searchTerm;
+    hideRecipes();
+  }
+}
 
-// function addSearchTerm(searchTerm) {
-//     const trimTerm = searchTerm.trim().toLowerCase();
-//     includedCategory = trimTerm;
-//     hideArticles();
-//     let url = new URL(window.location.href);
-//     url.searchParams.append('category', trimTerm);
-//     history.pushState({}, '', url.href);
-// }
+// document.addEventListener("DOMContentLoaded", function() {
+//   initialize();
+// });
 
-// function initialize() {
-//     const params = new URLSearchParams(window.location.search);
-//     params.getAll('category').forEach(category => {
-//         addSearchTerm(category.trim().toLowerCase());
-//     })
-//     return;
-// }
+// toggle article visibility with tags
+function hideRecipes() {
+  const recipes = document.querySelectorAll("section");
+  if (selectedCategory == '' || selectedCategory == 'all') {
+    recipes.forEach((recipe) => {
+      recipe.classList.remove("hidden");
+    });
+    return;
+  } else {
+    let includedRecipes = [];
+    recipes.forEach((recipe) => {
+      recipe.querySelectorAll(".category").forEach((category) => {
+        if (selectedCategory == category.textContent.trim().toLowerCase()) {
+          includedRecipes.push(recipe);
+        }
+      });
+      if (includedRecipes.includes(recipe)) {
+        recipe.classList.remove("hidden");
+      } else {
+        recipe.classList.add("hidden");
+      }
+    });
+  }
+  return;
+}

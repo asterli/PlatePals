@@ -45,6 +45,7 @@ try {
         foreach ($data['recipes'] as $recipe) {
             $ingredients = json_encode($recipe['ingredients']);
             $instructions = json_encode($recipe['instructions']);
+            $category = json_encode($recipe['category']);
             $comments = json_encode($recipe['comments']);
 
             $stmt->execute([
@@ -55,7 +56,7 @@ try {
                 ':ingredients' => $ingredients,
                 ':instructions' => $instructions,
                 ':image' => $recipe['image'],
-                ':category' => $recipe['category'],
+                ':category' => $category,
                 ':comments' => $comments
             ]);
 

@@ -14,8 +14,8 @@ function generateRecipeCards(recipes) {
       </div>
       <div class="recipe-info">
         <h2>${recipe.title}</h2>
-        <p><strong></strong> ${recipe.description}</p>
-        <p id="category"><strong></strong> ${recipe.category}</p>
+        <p class="lato"><strong></strong> ${recipe.description}</p>
+        <p id="category"><strong></strong> ${JSON.parse(recipe.category).join(', ')}</p>
       </div>
     `;
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Rufina:wght@700&display=swap');
+
 :root {
   --accent-color: #0c869c;
   --gray: #d3d3d3;
@@ -5,8 +7,6 @@
   --darkest-gray: #808080;
   --black: #36454f;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Rufina:wght@700&display=swap');
 
 * {
   box-sizing: border-box;

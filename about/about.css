@@ -91,5 +91,12 @@ nav {
 }
 
 .member2 p {
-  margin-top: 28rem;
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section {
+    padding-left: 0;
+    text-align: center;
+  }
 }
