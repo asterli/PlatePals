@@ -1,7 +1,6 @@
 function generateRecipeCards(recipes) {
   const recipeContainer = document.getElementById("recipe-container");
-  console.log(recipes);
-  if (!recipes) {
+  if (!recipes || recipes.length === 0) {
     var message = document.createElement("p");
     message.classList.add("lato");
     message.classList.add("noRecipeMsg")
@@ -16,6 +15,14 @@ function generateRecipeCards(recipes) {
     const recipeLink = document.createElement("a");
     recipeLink.href = `../recipepage/recipepage.html?id=${recipe.id}`;
 
+    let categoriesDisplayText;
+    try {
+      const categories = JSON.parse(recipe.category);
+      categoriesDisplayText = categories.join(', ');
+    } catch(e) {
+      categoriesDisplayText = recipe.category;
+    }
+
     recipeLink.innerHTML = `
       <div class="recipe-image">
         <img src="${recipe.image}" alt="${recipe.title}" />
@@ -23,7 +30,7 @@ function generateRecipeCards(recipes) {
       <div class="recipe-info">
         <h2>${recipe.title}</h2>
         <p class="lato"><strong></strong> ${recipe.description}</p>
-        <p id="category"><strong></strong> ${JSON.parse(recipe.category).join(', ')}</p>
+        <p id="category"><strong></strong> ${categoriesDisplayText}</p>
       </div>
     `;
 
@@ -78,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
           document.getElementById("addRecipeModal").style.display = "none";
           window.location.href = `../recipepage/recipepage.html?id=${data.id}`;
         })
@@ -135,7 +141,6 @@ fetch("account.php")
     return response.json();
   })
   .then((data) => {
-    console.log(data);
     generateRecipeCards(data.recipes);
   })
   .catch((error) => console.error("Error fetching recipes:", error));

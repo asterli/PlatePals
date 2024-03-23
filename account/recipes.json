@@ -122,6 +122,96 @@
           "comment": "I was nervous to try making chicken parmesan, but this recipe was easy to follow and turned out delicious!"
         }
       ]
+    },
+    {
+      "id": "4",
+      "title": "Vegetable Stir-Fry",
+      "author": "Sara Lee",
+      "description": "A quick and healthy stir-fry packed with colorful vegetables and savory flavors.",
+      "ingredients": [
+        "2 cups broccoli florets",
+        "1 red bell pepper, thinly sliced",
+        "1 yellow bell pepper, thinly sliced",
+        "1 carrot, julienned",
+        "1 cup snap peas",
+        "1 cup sliced mushrooms",
+        "3 cloves garlic, minced",
+        "1 tablespoon ginger, minced",
+        "1/4 cup soy sauce",
+        "2 tablespoons oyster sauce",
+        "1 tablespoon sesame oil",
+        "2 tablespoons vegetable oil",
+        "Salt and black pepper to taste",
+        "Cooked rice for serving",
+        "Sesame seeds and chopped green onions for garnish"
+      ],
+      "instructions": [
+        "In a small bowl, mix together soy sauce, oyster sauce, and sesame oil. Set aside.",
+        "Heat vegetable oil in a large skillet or wok over high heat.",
+        "Add minced garlic and ginger to the skillet and stir-fry for 30 seconds.",
+        "Add broccoli, bell peppers, carrot, snap peas, and mushrooms to the skillet. Stir-fry for 4-5 minutes, or until vegetables are tender-crisp.",
+        "Pour the sauce mixture over the vegetables in the skillet. Toss to coat evenly.",
+        "Season with salt and black pepper to taste.",
+        "Serve the stir-fried vegetables over cooked rice, garnished with sesame seeds and chopped green onions."
+      ],
+      "image": "../images/recipes/stir_fry.png",
+      "category": [
+        "Lunch",
+        "Dinner"
+      ],
+      "comments": [
+        {
+          "name": "VeggieLover",
+          "comment": "Delicious and colorful! I love how versatile this recipe is."
+        },
+        {
+          "name": "HealthyEater",
+          "comment": "Such a great way to get in a variety of veggies! Definitely making this again."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Creamy Tomato Basil Soup",
+      "author": "Michaela Smith",
+      "description": "A comforting and creamy tomato soup infused with the flavors of fresh basil.",
+      "ingredients": [
+        "2 tablespoons olive oil",
+        "1 onion, chopped",
+        "3 cloves garlic, minced",
+        "2 (28-ounce) cans whole peeled tomatoes",
+        "2 cups vegetable broth",
+        "1/2 cup heavy cream",
+        "1/4 cup chopped fresh basil",
+        "Salt and black pepper to taste",
+        "Grated Parmesan cheese for garnish",
+        "Croutons for serving"
+      ],
+      "instructions": [
+        "In a large pot, heat olive oil over medium heat.",
+        "Add chopped onion and garlic to the pot. Cook until softened and fragrant, about 5 minutes.",
+        "Add whole peeled tomatoes (with juices) to the pot. Use a spoon to break up the tomatoes into smaller pieces.",
+        "Pour in vegetable broth and bring the mixture to a simmer. Let it cook for 15-20 minutes, stirring occasionally.",
+        "Using an immersion blender, blend the soup until smooth. Alternatively, transfer the soup in batches to a blender and blend until smooth, then return it to the pot.",
+        "Stir in heavy cream and chopped fresh basil. Season with salt and black pepper to taste.",
+        "Simmer the soup for an additional 5 minutes to allow the flavors to meld together.",
+        "Serve the creamy tomato basil soup hot, garnished with grated Parmesan cheese and accompanied by croutons."
+      ],
+      "image": "../images/recipes/tomato_soup.png",
+      "category": [
+        "Lunch",
+        "Dinner"
+      ],
+      "comments": [
+        {
+          "name": "SoupLover",
+          "comment": "Absolutely delicious! The basil adds such a nice freshness to the soup."
+        },
+        {
+          "name": "ComfortFoodFan",
+          "comment": "Perfect for a cozy night in. Creamy and flavorful!"
+        }
+      ]
     }
   ]
 }

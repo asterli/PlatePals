@@ -18,11 +18,11 @@
         <li class="rufina" id="home-name">PlatePals</li>
         <div id="end-nav">
           <?php if (isset($_SESSION['user_id'])): ?>
-          <li><a href="/account/account.html">My Account</a></li>
-          <li><a href="/account/signout.php">Sign Out</a></li>
+          <li><a href="account/account.html">My Account</a></li>
+          <li><a href="account/signout.php">Sign Out</a></li>
           <?php else: ?>
-          <li><a href="/login/login.php">Login</a></li>
-          <li><a href="/signup/signup.php">Sign Up</a></li>
+          <li><a href="login/login.php">Login</a></li>
+          <li><a href="signup/signup.php">Sign Up</a></li>
           <?php endif; ?>
         </div>
       </ul>
