@@ -12,10 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (data.success && data.recipe) {
           populateRecipePage(data.recipe);
         } else {
-          console.error("Recipe not found");
+          displayErrorMessage("Recipe not found or does not exist."); // Display an error message
         }
       })
-      .catch((error) => console.error("Error fetching recipe:", error));
+      .catch((error) => {
+        console.error("Error fetching recipe:", error);
+        displayErrorMessage(
+          "An error occurred while fetching the recipe details."
+        );
+      });
+  }
+
+  function displayErrorMessage(message) {
+    const container = document.querySelector(".container");
+    container.innerHTML = `<div class="error-message">${message}</div>`; // Use your existing CSS styles or add new ones for the error message
   }
 
   function populateRecipePage(recipe) {

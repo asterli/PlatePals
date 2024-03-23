@@ -134,3 +134,13 @@ nav {
 .comment-form input[type="submit"]:hover {
   background: #555;
 }
+
+.error-message {
+  color: #ff0000;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20%;
+  border: 1px solid #ff0000;
+  background-color: #ffe5e5; 
+}
