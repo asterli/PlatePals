@@ -2,10 +2,10 @@ function generateRecipeCards(recipes) {
   const recipeContainer = document.getElementById("recipe-container");
   if (!recipes || recipes.length === 0) {
     var message = document.createElement("p");
-    message.classList.add("lato");
-    message.classList.add("noRecipeMsg")
-    message.textContent = "No recipes added yet."
+    message.classList.add("lato", "noRecipeMsg");
+    message.textContent = "No recipes added yet.";
     recipeContainer.appendChild(message);
+    return;
   }
 
   recipes.forEach((recipe) => {
@@ -18,8 +18,8 @@ function generateRecipeCards(recipes) {
     let categoriesDisplayText;
     try {
       const categories = JSON.parse(recipe.category);
-      categoriesDisplayText = categories.join(', ');
-    } catch(e) {
+      categoriesDisplayText = categories.join(", ");
+    } catch (e) {
       categoriesDisplayText = recipe.category;
     }
 
@@ -31,12 +31,43 @@ function generateRecipeCards(recipes) {
         <h2>${recipe.title}</h2>
         <p class="lato"><strong></strong> ${recipe.description}</p>
         <p id="category"><strong></strong> ${categoriesDisplayText}</p>
-      </div>
-    `;
+      </div>`;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerHTML = "Delete";
+    deleteBtn.classList.add("delete-recipe-button");
+
+    deleteBtn.addEventListener("click", function (event) {
+      deleteRecipe(recipe.id);
+    });
 
     card.appendChild(recipeLink);
+    card.appendChild(deleteBtn);
+
     recipeContainer.appendChild(card);
   });
+}
+
+function deleteRecipe(recipeId) {
+  if (!confirm("Are you sure you want to delete this recipe?")) {
+    return;
+  }
+
+  fetch("deleteRecipe.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: `recipeId=${recipeId}`,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data.message);
+      if (data.success) {
+        window.location.reload();
+      }
+    })
+    .catch((error) => console.error("Error:", error));
 }
 
 document.querySelectorAll(".category-button").forEach((button) => {

@@ -18,6 +18,11 @@
   font-style: normal;
 }
 
+nav li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 .tint {
   position: absolute;
   top: 0;
