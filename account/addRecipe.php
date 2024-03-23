@@ -46,6 +46,11 @@ try {
     $ingredients = json_encode(explode("\n", $_POST['recipeIngredients']));
     $instructions = json_encode(explode("\n", $_POST['recipeInstructions']));
 
+    
+    $categories = explode(",", $_POST['recipeCategory']);
+    $categories = array_map('trim', $categories); 
+    $categoryJson = json_encode($categories); 
+
     $stmt->execute([
         ':user_id' => $_SESSION['user_id'],
         ':title' => $_POST['recipeTitle'],
@@ -54,7 +59,7 @@ try {
         ':ingredients' => $ingredients,
         ':instructions' => $instructions,
         ':image' => $targetFilePath,
-        ':category' => $_POST['recipeCategory'],
+        ':category' => $categoryJson, 
     ]);
 
     $lastId = $pdo->lastInsertId();
