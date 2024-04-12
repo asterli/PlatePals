@@ -1,6 +1,6 @@
 # PlatePals
 
-Developed a user-friendly cooking recipe uploading website aimed at uniting culinary enthusiasts. Users can share, discover, and rate recipes, fostering a community of food lovers. Highlights include:
+Developed a user-friendly cooking recipe uploading website aimed at uniting culinary enthusiasts. Users can share, discover, and rate recipes, fostering a community of food lovers. 
 
 User Registration and Authentication: Implemented features allowing users to create accounts, log in, and manage profiles using PHP for server-side operations and MySQL for database management.
 Recipe Upload: Engineered the functionality for users to submit their own recipes with details such as ingredients, instructions, and images, enhancing the user experience.
